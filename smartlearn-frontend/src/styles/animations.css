@@ -1,0 +1,53 @@
+/* Fade In */
+.fade-in {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Slide Up */
+.slide-up {
+  animation: slideUp 0.6s ease forwards;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Button Hover Glow */
+.btn-glow {
+  background: var(--gold);
+  color: var(--primary-dark);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  transition: var(--transition-medium);
+}
+
+.btn-glow:hover {
+  box-shadow: 0 0 15px var(--gold);
+  transform: scale(1.05);
+}
+
+/* Card hover */
+.card-hover {
+  background: var(--primary);
+  padding: 20px;
+  border-radius: 12px;
+  transition: var(--transition-medium);
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}

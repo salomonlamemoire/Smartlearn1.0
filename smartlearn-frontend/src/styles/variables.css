@@ -1,0 +1,14 @@
+:root {
+  --primary-dark: #02364A;
+  --primary: #044459;
+  --gold-light: #F1D29B;
+  --gold: #E3B063;
+  --gold-medium: #D39A4A;
+  --gold-dark: #C58633;
+  --brown: #9E6A24;
+  --background-dark: #0A1F28;
+
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.4s ease;
+  --transition-slow: 0.6s ease;
+}

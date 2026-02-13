@@ -1,0 +1,263 @@
+/* -------------------- VARIABLES -------------------- */
+:root {
+  --primary: #02364A;
+  --primary-dark: #011D2B;
+  --background-dark: #00151F;
+  --gold: #E3B063;
+  --gold-light: #F1D29B;
+  --transition-fast: 0.2s ease-in-out;
+  --transition-medium: 0.4s ease-in-out;
+}
+
+/* -------------------- GLOBAL -------------------- */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--background-dark);
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: var(--gold);
+  transition: var(--transition-fast);
+}
+
+a:hover {
+  color: var(--gold-light);
+}
+
+button {
+  cursor: pointer;
+}
+
+/* -------------------- HEADER & NAVBAR -------------------- */
+header {
+  padding: 20px 40px;
+  background: var(--primary-dark);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+header h2 {
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+}
+
+header h2 img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 8px;
+}
+
+nav a {
+  margin-right: 20px;
+  font-weight: bold;
+  color: var(--gold);
+  transition: var(--transition-fast);
+}
+
+nav a:last-child {
+  margin-right: 0;
+}
+
+nav a:hover {
+  color: var(--gold-light);
+}
+
+/* -------------------- MAIN PAGE -------------------- */
+main {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+main h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--gold);
+}
+
+main p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+main .btn-glow {
+  width: 200px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #E3B063, #D39A4A);
+  color: #0A1F28;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #E3B063, 0 0 20px #D39A4A;
+}
+
+main .btn-glow:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #E3B063, 0 0 30px #D39A4A;
+}
+
+/* -------------------- REGISTER & PAYMENT CARDS -------------------- */
+.register-container,
+.payment-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.register-card,
+.payment-card {
+  background-color: #02364A;
+  color: #F1D29B;
+  padding: 30px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  transition: var(--transition-medium);
+}
+
+.register-card h2,
+.payment-card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--gold);
+}
+
+/* -------------------- INPUTS -------------------- */
+.register-card input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  background: var(--background-dark);
+  color: white;
+  transition: var(--transition-fast);
+}
+
+.register-card input:focus {
+  outline: none;
+  box-shadow: 0 0 8px var(--gold);
+}
+
+/* -------------------- RADIO BUTTONS -------------------- */
+.payment-option {
+  margin: 0.8rem 0;
+}
+
+.payment-option label {
+  display: flex;
+  justify-content: space-between; /* texte à gauche, radio à droite */
+  align-items: center;            /* alignement vertical */
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #044459;
+  border-radius: 8px;
+  background-color: #0A1F28;
+  color: #E3B063;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.payment-option label:hover {
+  background-color: #044459;
+  color: #F1D29B;
+}
+
+.payment-option input[type="radio"] {
+  margin-left: 10px;
+  accent-color: #D39A4A;
+  transform: scale(1.2);
+}
+
+/* -------------------- BOUTONS -------------------- */
+.btn-glow {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #E3B063, #D39A4A);
+  color: #0A1F28;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #E3B063, 0 0 20px #D39A4A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-glow:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #E3B063, 0 0 30px #D39A4A;
+}
+
+.btn-glow:active {
+  transform: scale(0.98);
+}
+
+.btn-glow.loading {
+  background: #c58633;
+  cursor: not-allowed;
+}
+
+/* -------------------- SPINNER -------------------- */
+.spinner {
+  border: 3px solid #f1d29b;
+  border-top: 3px solid #0a1f28;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* -------------------- MESSAGES -------------------- */
+.error-text {
+  color: #ff6b6b;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.success-text {
+  color: #23d18b;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* -------------------- ANIMATIONS -------------------- */
+.fade-in {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+.slide-up {
+  animation: slideUp 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity:0; }
+  to { transform: translateY(0); opacity:1; }
+}
